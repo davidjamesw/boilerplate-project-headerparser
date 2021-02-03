@@ -38,6 +38,7 @@ var listener = app.listen(process.env.PORT, function () {
 });
 
 app.get("/api/whoami", (req, res) => {
-  console.log(req.ip);
-  res.json({ipadress: req.ip});
+  let whoami = {ipadress: req.ip};
+  console.log(whoami);
+  res.json(whoami);
 });
